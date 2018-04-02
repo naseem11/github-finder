@@ -1,12 +1,12 @@
-class UI{
+class UI {
 
     constructor() {
-        this.profile=document.getElementById('profile');
+        this.profile = document.getElementById('profile');
     }
 
-    showProfile(profile){
+    showProfile(profile) {
         console.log(profile);
-        this.profile.innerHTML= `
+        this.profile.innerHTML = `
         
         <div class="card card-body mb-3">
                 <div class="row">
@@ -40,20 +40,20 @@ class UI{
             <div id="repos"></div>
         `;
 
-        
-        
 
-            
-        
 
-        
+
+
+
+
+
     }
 
-    showRepos(repos){
-        let output='';
-        repos.forEach((repo)=>{
+    showRepos(repos) {
+        let output = '';
+        repos.forEach((repo) => {
 
-          output+=`
+            output += `
              
         <div class="card card-body mb-3">
               <div class="row ">
@@ -74,38 +74,38 @@ class UI{
 
         });
 
-      
-        document.getElementById('repos').innerHTML=output;
+
+        document.getElementById('repos').innerHTML = output;
     }
 
 
-        
 
- 
 
-    showAlert(message){
+
+
+    showAlert(message) {
         this.dismissAlert();
-        const searchDiv=document.querySelector('.searchContainer');
-        const cardDiv=document.querySelector('.search');
-        const messageDiv=document.createElement('div');
-        messageDiv.textContent=message;
-        messageDiv.setAttribute('class','alert alert-danger');
-        searchDiv.insertBefore(messageDiv,cardDiv);
+        const searchDiv = document.querySelector('.searchContainer');
+        const cardDiv = document.querySelector('.search');
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = message;
+        messageDiv.setAttribute('class', 'alert alert-danger');
+        searchDiv.insertBefore(messageDiv, cardDiv);
 
     }
 
-    dismissAlert(){
+    dismissAlert() {
 
-        const messageDiv=document.querySelector('.alert');
-        if(messageDiv){
+        const messageDiv = document.querySelector('.alert');
+        if (messageDiv) {
 
             messageDiv.remove();
         }
     }
 
-    clearProfile(){
+    clearProfile() {
 
-        this.profile.innerHTML='';
+        this.profile.innerHTML = '';
 
     }
 }

@@ -1,44 +1,45 @@
 // init UI
 
-const ui=new UI;
-const key=new Key;
+const ui = new UI;
+const key = new Key;
+
 
 // Add event listener to the username input 
 
-document.getElementById('userName').addEventListener('keyup',(e)=>{
+document.getElementById('userName').addEventListener('keyup', (e) => {
 
     // Dismiss alert if there is one
 
-ui.dismissAlert();
+    ui.dismissAlert();
 
-const userName=e.target.value;
+    const userName = e.target.value;
 
 
-if(userName!==''){
+    if (userName !== '') {
 
-    const gitHub=new Github(key);
-   
-    gitHub.getUser(userName)
-    .then((data)=>{
+        const gitHub = new Github(key);
 
-        if(data.profile.message==='Not Found'){
+        gitHub.getUser(userName)
+            .then((data) => {
 
-            ui.showAlert('User Not Found');
+                if (data.profile.message === 'Not Found') {
 
-        }else{
-                // show profile
-            ui.showProfile(data.profile);
-            ui.showRepos(data.repos);
-            console.log(data.repos);
-            
-        }
-    });
+                    ui.showAlert('User Not Found');
 
-}else{
+                } else {
+                    // show profile
+                    ui.showProfile(data.profile);
+                    ui.showRepos(data.repos);
+                    console.log(data.repos);
 
-    //clear profile
+                }
+            });
 
-    ui.clearProfile();
-}
+    } else {
+
+        //clear profile
+
+        ui.clearProfile();
+    }
 
 });
