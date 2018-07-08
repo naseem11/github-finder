@@ -30,7 +30,7 @@ document.getElementById('userName').addEventListener('keyup', (e) => {
                     // show profile
                     ui.showProfile(data.profile);
                     ui.showRepos(data.repos);
-                    console.log(data.repos);
+                   
 
                 }
             });
