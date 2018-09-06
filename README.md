@@ -1,7 +1,7 @@
 # GithubFinder
 An application to search a user profile on github using  pure javaScript.
 
-### [Visit  this application here](https://profile-finder-acb62.firebaseapp.com)
+### [Visit  this application here..](https://profile-finder-acb62.firebaseapp.com)
 
 ![userfinder](https://user-images.githubusercontent.com/22799847/42477378-c14fbd82-83c8-11e8-960b-60feabb76d12.PNG)
 
